@@ -15,13 +15,13 @@ stds = data[selected_columns].std()
 
 cis = 1.96 * stds / np.sqrt(len(data))
 
-st.title('Eli Lilly Revenue')
+st.title('Eli Lilly Annual Revenue')
 
 fig, ax = plt.subplots()
 ax.bar(selected_columns, means, yerr=cis, capsize=5)
 
 ax.set_xlabel('Drugs')
-ax.set_ylabel('Revenue in Billions')
+ax.set_ylabel('Annual Revenue in Billions')
 ax.set_title('')
 
 plt.xticks(rotation=90)
